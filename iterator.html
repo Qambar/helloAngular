@@ -1,5 +1,5 @@
 <!--
-	Simple Demo : Hello World
+	Simple Demo : Iterator
 	Author	: Qambar Raza
 	Email	: qambar.raza@hotmail.com
 
@@ -12,9 +12,11 @@
 		<script src="script.js"></script>
 	</head>
 	<body>
-			<div data-ng-controller="HelloCntl">
-				Your name: <input type="text" data-ng-model="name" />
-				Hello {{ name }}!
+			<div data-ng-init="names = [ 'Qambar Raza', 'Ali Immam', 'Ali Shah']">
+
+				<ul>
+					<li data-ng-repeat="name in names">{{name}}</li>
+				</ul>
 			</div>
 	</body>
 </html>
