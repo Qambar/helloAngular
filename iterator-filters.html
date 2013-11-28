@@ -1,0 +1,23 @@
+<!--
+	Simple Demo : Iterator - filters
+	Author	: Qambar Raza
+	Email	: qambar.raza@hotmail.com
+
+-->
+
+<!doctype html>
+<html data-ng-app="">
+	<head>
+		<script src="http://code.angularjs.org/1.2.3/angular.min.js"></script>
+		<script src="script.js"></script>
+	</head>
+	<body>
+			<div data-ng-init="users = [{name: 'Qambar Raza', city: 'London'}, {name: 'Ali Immam', city: 'Khobar'}, {name: 'Ali Shah', city: 'Karachi'}]">
+
+				<input type="text" data-ng-model="name" />
+				<ul>
+					<li data-ng-repeat="user in users | filter: name">{{ user.name }} - {{ user.city }}</li>
+				</ul>
+			</div>
+	</body>
+</html>
