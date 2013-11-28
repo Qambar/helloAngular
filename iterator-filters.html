@@ -16,7 +16,7 @@
 
 				<input type="text" data-ng-model="name" />
 				<ul>
-					<li data-ng-repeat="user in users | filter: name">{{ user.name }} - {{ user.city }}</li>
+					<li data-ng-repeat="user in users | filter: name | orderBy: 'city'">{{ user.name }} - {{ user.city }}</li>
 				</ul>
 			</div>
 	</body>
